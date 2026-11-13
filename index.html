@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NutriViva: alimentos frescos y saludables basados en la agricultura de Nariño.">
+<meta name="theme-color" content="#174b3a">
+<title>NutriViva | Nutrición de Nariño para el Mundo</title>
+<style>
+:root{--green:#174b3a;--green2:#28664e;--lime:#d9edbd;--cream:#f7f6ef;--ink:#202923;--muted:#6d786f;--line:#e5e9e2;--white:#fff;--orange:#ef9b54;--carrot:#e86f2c;--nequi:#670080;--shadow:0 14px 40px #173c2b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.topbar{background:var(--green);color:#eaf3e9;text-align:center;padding:9px 15px;font-size:12px;letter-spacing:.04em}.nav{position:sticky;top:0;z-index:20;background:#f7f6eff2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;gap:28px}.logo{font-size:22px;font-weight:850;letter-spacing:-1px;color:var(--green);text-decoration:none}.logo span{color:#83a85b}.links{display:flex;gap:23px;flex:1}.links a{font-size:13px;color:#46534a;text-decoration:none}.links a:hover{color:var(--green)}.navactions{display:flex;gap:9px;align-items:center}.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:700;font-size:13px;transition:.2s}.btn-primary{background:var(--green);color:white}.btn-primary:hover{background:var(--green2);transform:translateY(-1px)}.btn-light{background:#eaf0e6;color:var(--green)}.btn-outline{background:transparent;border:1px solid #cbd6c9;color:var(--green)}.iconbtn{border:1px solid var(--line);background:white;border-radius:50px;padding:10px 14px;color:var(--green)}.cartcount{background:var(--orange);color:#352516;border-radius:20px;padding:2px 7px;font-size:11px;margin-left:4px}.container{max-width:1180px;margin:auto;padding:0 22px}.hero{padding:46px 0 60px}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:35px;align-items:center}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:var(--green2);font-weight:800}.hero h1{font-size:clamp(42px,5vw,68px);line-height:1.02;letter-spacing:-3px;margin:17px 0 20px;color:var(--green);max-width:620px}.hero p{font-size:16px;line-height:1.75;color:var(--muted);max-width:500px}.hero-ctas{display:flex;gap:11px;margin-top:25px;flex-wrap:wrap}.hero-image{height:450px;border-radius:28px;overflow:hidden;position:relative;background:#d9e4d5}.hero-image img{width:100%;height:100%;object-fit:cover}.image-tag{position:absolute;bottom:20px;left:20px;background:#fffF;padding:14px 18px;border-radius:15px;font-size:12px;box-shadow:var(--shadow)}.image-tag strong{display:block;color:var(--green);font-size:14px;margin-bottom:3px}.trust{display:flex;gap:25px;margin-top:30px;color:#657168;font-size:12px;flex-wrap:wrap}.trust span:before{content:"✓";color:#5f8b50;font-weight:900;margin-right:7px}.section{padding:62px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.section h2{font-size:clamp(28px,3vw,39px);letter-spacing:-1.5px;color:var(--green);margin:8px 0}.sub{color:var(--muted);font-size:14px;line-height:1.6;max-width:580px}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cat{background:#e9eee4;border-radius:18px;padding:22px;min-height:145px;text-decoration:none;color:var(--green);display:flex;flex-direction:column;justify-content:space-between;transition:.2s}.cat:hover{transform:translateY(-4px);background:#e0ead9}.cat .emoji{font-size:28px}.cat strong{font-size:17px}.cat small{color:#69776c}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;border-radius:30px;padding:9px 15px;font-size:12px;color:#58645b}.filter.active{background:var(--green);color:white;border-color:var(--green)}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.product{background:white;border:1px solid #edf0e9;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #1c3e2710;display:flex;flex-direction:column}.product-img{height:220px;background:#edf0e8;position:relative}.product-img img{width:100%;height:100%;object-fit:cover}.pill{position:absolute;top:12px;left:12px;background:#f5f1dc;color:#655a32;border-radius:20px;padding:6px 10px;font-size:10px;font-weight:800}.product-body{padding:16px;display:flex;flex-direction:column;flex:1}.product-type{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#829080;font-weight:800}.product h3{font-size:16px;color:var(--green);margin:7px 0}.product p{font-size:12px;line-height:1.55;color:var(--muted);margin:0 0 14px;flex:1}.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:850;color:var(--green);font-size:17px}.add{border:0;background:var(--green);color:white;border-radius:30px;padding:10px 13px;font-size:11px;font-weight:800}.add:hover{background:var(--green2)}.note{font-size:11px;color:#7a847b;line-height:1.6;margin-top:18px}.split{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.feature-img{height:370px;border-radius:22px;overflow:hidden}.feature-img img{width:100%;height:100%;object-fit:cover}.feature-copy h2{font-size:38px;line-height:1.1;color:var(--green);letter-spacing:-1.5px}.feature-copy p{color:var(--muted);line-height:1.8;font-size:14px}.meal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px}.day{background:white;border:1px solid var(--line);border-radius:14px;padding:13px 10px;min-height:145px}.day b{font-size:12px;color:var(--green)}.day p{font-size:11px;line-height:1.5;color:var(--muted)}.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.article{background:white;border-radius:18px;overflow:hidden}.article img{width:100%;height:180px;object-fit:cover}.article div{padding:18px}.article small{color:#849080;font-size:10px;text-transform:uppercase;letter-spacing:.1em}.article h3{color:var(--green);font-size:17px;margin:9px 0}.article p{color:var(--muted);font-size:12px;line-height:1.6}.article a{color:var(--green);font-size:12px;font-weight:800;text-decoration:none}.newsletter{background:var(--green);color:white;border-radius:24px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}.newsletter h2{color:white;margin:0 0 7px}.newsletter p{color:#d2e1d3;font-size:13px;margin:0}.newsletter form{display:flex;gap:8px;max-width:420px;width:100%}.newsletter input{border:0;border-radius:30px;padding:13px 16px;min-width:0;flex:1}.newsletter button{background:var(--lime);color:var(--green)}footer{background:#102f25;color:#d9e5dc;padding:45px 0 25px;margin-top:65px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer-grid h4{color:white}.footer-grid p,.footer-grid a{color:#bdcfc2;font-size:12px;line-height:1.8;text-decoration:none;display:block}.copyright{border-top:1px solid #355346;margin-top:30px;padding-top:18px;font-size:11px;color:#9db4a5}.overlay{position:fixed;inset:0;background:#10251dcc;z-index:50;display:none;justify-content:flex-end}.overlay.open{display:flex}.drawer{background:var(--cream);height:100%;width:min(470px,100%);padding:25px;overflow:auto;box-shadow:-10px 0 40px #0002}.drawer-head{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#e7ede4;border-radius:50%;width:36px;height:36px;color:var(--green);font-size:20px}.cartline{display:grid;grid-template-columns:65px 1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid var(--line);align-items:center}.cartline img{width:65px;height:65px;object-fit:cover;border-radius:10px}.cartline h4{font-size:13px;margin:0 0 5px;color:var(--green)}.cartline small{font-size:11px;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{border:1px solid var(--line);background:white;border-radius:50%;width:24px;height:24px}.cart-total{display:flex;justify-content:space-between;margin:12px 0;font-size:14px}.cart-total.total{font-weight:900;color:var(--green);font-size:19px;border-top:1px solid var(--line);padding-top:16px}.field{width:100%;padding:12px 13px;border:1px solid #dce3d9;background:white;border-radius:10px;margin:6px 0 12px;outline:none}.field:focus{border-color:#6f9a69}.empty{text-align:center;padding:45px 10px;color:var(--muted);font-size:13px}.modal{position:fixed;inset:0;z-index:70;background:#10251dcc;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalbox{background:var(--cream);border-radius:20px;padding:28px;width:min(760px,100%);max-height:90vh;overflow:auto}.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.metric{background:white;border:1px solid var(--line);border-radius:13px;padding:16px}.metric small{color:var(--muted);font-size:11px}.metric strong{display:block;color:var(--green);font-size:24px;margin-top:5px}.admin-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.admin-table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden;font-size:12px}.admin-table th,.admin-table td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}.admin-table th{background:#eaf0e6;color:var(--green)}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(100px);background:#173d2e;color:white;padding:13px 20px;border-radius:30px;font-size:12px;z-index:100;transition:.3s}.toast.show{transform:translateX(-50%) translateY(0)}.mobile-menu{display:none}
+
+@media(max-width:850px){.links{display:none}.hero-grid,.split{grid-template-columns:1fr}.hero-image{height:350px}.products{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.meal-days{grid-template-columns:repeat(2,1fr)}.articles{grid-template-columns:1fr 1fr}.newsletter{display:block}.newsletter form{margin-top:18px}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.navin{padding:12px 15px;gap:10px}.logo{font-size:19px}.navactions{margin-left:auto}.navactions .btn-light{display:none}.container{padding:0 16px}.hero{padding-top:30px}.hero h1{font-size:43px;letter-spacing:-2px}.hero-image{height:290px}.section{padding:45px 0}.products{grid-template-columns:1fr;gap:10px}.product-img{height:180px}.product-body{padding:12px}.product h3{font-size:14px}.product p{font-size:11px}.price{font-size:14px}.add{padding:9px}.articles{grid-template-columns:1fr}.newsletter{padding:25px}.newsletter form{flex-direction:column}.footer-grid{grid-template-columns:1fr}.admin-grid{grid-template-columns:1fr}.modalbox{padding:18px}}
+
+/* ================= ESTILOS CHATBOT ZANAHORIOT ================= */
+.zbot-launcher{position:fixed;bottom:22px;right:22px;z-index:2147483647;display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,#f28a38 0%,#e0601e 100%);color:#fff;border:2px solid #fff;border-radius:999px;padding:10px 18px 10px 12px;box-shadow:0 12px 30px rgba(224,96,30,.38),0 4px 12px rgba(23,75,58,.18);transition:transform .25s,box-shadow .25s;animation:zbotFloat 3.4s ease-in-out infinite;cursor:pointer}
+.zbot-launcher:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 16px 36px rgba(224,96,30,.48),0 6px 16px rgba(23,75,58,.24);animation-play-state:paused}
+.zbot-launcher.active{animation:none;background:linear-gradient(135deg,var(--green) 0%,var(--green2) 100%);box-shadow:0 10px 26px rgba(23,75,58,.35)}
+.zbot-avatar-badge{width:40px;height:40px;border-radius:50%;background:#fff7ed;display:flex;align-items:center;justify-content:center;font-size:23px;position:relative;flex-shrink:0;box-shadow:inset 0 -2px 5px rgba(224,96,30,.2);pointer-events:none}
+.zbot-online-dot{position:absolute;bottom:0;right:0;width:11px;height:11px;border-radius:50%;background:#35c759;border:2px solid #fff}
+.zbot-launcher-text{text-align:left;line-height:1.15;pointer-events:none}
+.zbot-launcher-text strong{display:block;font-size:14px;font-weight:850;letter-spacing:-.2px}
+.zbot-launcher-text small{display:block;font-size:10.5px;opacity:.92;font-weight:600}
+@keyframes zbotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+.zbot-window{position:fixed;bottom:88px;right:22px;z-index:2147483646;width:min(410px,calc(100vw - 28px));height:min(590px,calc(100vh - 115px));background:var(--cream);border:1px solid #d5dfd1;border-radius:24px;box-shadow:0 22px 55px rgba(16,47,37,.24);display:none;flex-direction:column;overflow:hidden;transform-origin:bottom right}
+.zbot-window.open{display:flex !important;animation:zbotPop .24s cubic-bezier(.22,1,.36,1)}
+@keyframes zbotPop{from{opacity:0;transform:scale(.92) translateY(12px)}to{opacity:1;transform:scale(1) translateY(0)}}
+
+.zbot-header{background:linear-gradient(135deg,var(--green) 0%,#1f5c47 100%);color:#fff;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:3px solid var(--carrot)}
+.zbot-head-info{display:flex;align-items:center;gap:11px}
+.zbot-head-icon{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#ffedd5,#fed7aa);display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.zbot-head-info h3{margin:0;font-size:16px;font-weight:850;letter-spacing:-.3px;display:flex;align-items:center;gap:6px}
+.zbot-tag{background:#ef9b54;color:#2b1808;font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em}
+.zbot-head-info p{margin:2px 0 0;font-size:11px;color:#cfe2d4}
+.zbot-head-actions{display:flex;gap:6px}
+.zbot-icon-btn{background:rgba(255,255,255,.14);border:0;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;transition:.2s;cursor:pointer}
+.zbot-icon-btn:hover{background:rgba(255,255,255,.26)}
+
+.zbot-messages{flex:1;overflow-y:auto;padding:15px;display:flex;flex-direction:column;gap:12px;background:radial-gradient(circle at top right,#eef4e8 0%,var(--cream) 55%)}
+.zbot-msg{max-width:88%;padding:11px 14px;border-radius:18px;font-size:12.5px;line-height:1.55;word-wrap:break-word;box-shadow:0 3px 10px rgba(23,60,43,.05)}
+.zbot-msg.bot{align-self:flex-start;background:#fff;color:var(--ink);border:1px solid #e4ebe0;border-bottom-left-radius:5px}
+.zbot-msg.user{align-self:flex-end;background:var(--green);color:#fff;border-bottom-right-radius:5px}
+.zbot-msg strong{color:var(--green)}
+.zbot-msg.user strong{color:#fff}
+.zbot-msg ul{margin:6px 0 4px 16px;padding:0}
+.zbot-msg li{margin-bottom:4px}
+
+.zbot-card{background:#f8faf6;border:1px solid #dce5d7;border-radius:12px;padding:9px 11px;margin-top:8px;font-size:11.5px}
+.zbot-card-title{font-weight:800;color:var(--carrot);font-size:12px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center}
+.zbot-badge-alt{background:#e6f0e4;color:var(--green);padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700}
+.zbot-price-table{width:100%;border-collapse:collapse;margin-top:7px;font-size:11px;background:#fff;border-radius:8px;overflow:hidden}
+.zbot-price-table th{background:#eaf0e6;color:var(--green);text-align:left;padding:6px 7px;font-weight:800}
+.zbot-price-table td{padding:6px 7px;border-bottom:1px solid #edf1ea;vertical-align:top}
+.zbot-price-table tr:last-child td{border-bottom:none}
+.zbot-price-val{font-weight:800;color:#c85617;white-space:nowrap}
+
+.zbot-quick{padding:8px 12px;background:#f0f4ec;border-top:1px solid #e0e7dc;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.zbot-quick::-webkit-scrollbar{display:none}
+.zbot-chip{background:#fff;border:1px solid #cbd7c6;color:var(--green);border-radius:20px;padding:6px 11px;font-size:11px;font-weight:700;white-space:nowrap;transition:.18s;flex-shrink:0;cursor:pointer}
+.zbot-chip:hover{background:var(--carrot);color:#fff;border-color:var(--carrot)}
+.zbot-inline-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.zbot-inline-chip{background:#fff4eb;border:1px solid #f4c39e;color:#b84b12;border-radius:14px;padding:4px 9px;font-size:11px;font-weight:700;transition:.15s;cursor:pointer}
+.zbot-inline-chip:hover{background:#e86f2c;color:#fff;border-color:#e86f2c}
+
+.zbot-input-area{padding:10px 12px;background:#fff;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center}
+.zbot-input{flex:1;border:1px solid #d5dfd1;background:#f8faf6;border-radius:999px;padding:10px 15px;font-size:12.5px;outline:none;color:var(--ink)}
+.zbot-input:focus{border-color:var(--carrot);background:#fff}
+.zbot-send{background:linear-gradient(135deg,#f28a38,#e0601e);color:#fff;border:0;border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;flex-shrink:0;transition:.2s;cursor:pointer}
+.zbot-send:hover{transform:scale(1.06);filter:brightness(1.05)}
+</style>
+</head>
+<body>
+<div class="topbar">ENVÍOS A COLOMBIA · COMPRA INFORMADA · APOYANDO EL CAMPO NARIÑENSE</div>
+<nav class="nav"><div class="navin">
+<a class="logo" href="#">nutri<span>viva.</span></a>
+<div class="links"><a href="#tienda">Catálogo Local</a><a href="#aprende">Aprende</a><a href="#nosotros">Nosotros</a></div>
+<div class="navactions"><button class="btn btn-light" onclick="openAdmin()">Administrar</button><button class="iconbtn" onclick="openCart()">Bolsa <span class="cartcount" id="cartCount">0</span></button></div>
+</div></nav>
+<main>
+<section class="hero"><div class="container hero-grid">
+<div><div class="eyebrow">Agricultura de Nariño en tu mesa</div><h1>Come mejor. <br>Apoya lo local.</h1><p>Encuentra productos seleccionados, frescos y nutritivos directamente de los campos de Pasto, La Unión, San Pablo, Imués, Túquerres y Buesaco.</p>
+<div class="hero-ctas"><a class="btn btn-primary" href="#tienda" style="text-decoration:none">Explorar Catálogo</a></div>
+<div class="trust"><span>Cultivos limpios</span><span>Compra y pago fácil por Nequi</span><span>Apoyo campesino</span></div></div>
+<div class="hero-image"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=85" alt="Mesa con alimentos frescos y variados"><div class="image-tag"><strong>Tu bienestar empieza en el plato</strong>Nutrición real, desde el sur de Colombia.</div></div>
+</div></section>
+<section class="section" style="padding-top:20px"><div class="container"><div class="section-head"><div><div class="eyebrow">Compra por categoría</div><h2>Lo que necesitas, más fácil</h2></div></div>
+<div class="categories">
+  <a class="cat" href="#tienda" onclick="setFilter('Proteína')"><span class="emoji">🌱</span><strong>Proteínas</strong><small>Nutrición andina →</small></a>
+  <a class="cat" href="#tienda" onclick="setFilter('Batidos')"><span class="emoji">🥤</span><strong>Batidos</strong><small>Frutas de cosecha →</small></a>
+  <a class="cat" href="#tienda" onclick="setFilter('Snacks')"><span class="emoji">🥔</span><strong>Snacks</strong><small>Para el día a día →</small></a>
+  <a class="cat" href="#tienda" onclick="setFilter('Superalimentos')"><span class="emoji">🍯</span><strong>Superalimentos</strong><small>Energía natural →</small></a>
+</div></div></section>
+
+<section class="section" id="tienda"><div class="container"><div class="section-head"><div><div class="eyebrow">Selección NutriViva Nariño</div><h2>Catálogo Agroalimentario</h2><p class="sub">Productos procesados y frescos directamente de nuestros 6 municipios aliados.</p></div></div>
+<div class="filters">
+  <button class="filter active" onclick="setFilter('Todos',this)">Todos</button>
+  <button class="filter" onclick="setFilter('Proteína',this)">Proteínas</button>
+  <button class="filter" onclick="setFilter('Batidos',this)">Batidos e Infusiones</button>
+  <button class="filter" onclick="setFilter('Snacks',this)">Snacks</button>
+  <button class="filter" onclick="setFilter('Superalimentos',this)">Superalimentos</button>
+</div>
+<div class="products" id="productGrid"></div>
+</div></section>
+
+<section class="section" id="aprende"><div class="container"><div class="section-head"><div><div class="eyebrow">Contenido para aprender</div><h2>Nutrición con criterio</h2></div></div>
+<div class="articles">
+<article class="article"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Ensalada colorida"><div><small>Alimentación · 5 min</small><h3>Pisos térmicos en tu plato</h3><p>Combina verduras de clima frío como zanahorias de Obonuco con energía del clima cálido.</p></div></article>
+<article class="article"><img src="https://images.unsplash.com/photo-1494597564530-871f2b93ac55?auto=format&fit=crop&w=800&q=80" alt="Frutas frescas"><div><small>Mercado · 4 min</small><h3>Apoya la economía local</h3><p>Al comprar productos de La Unión o Buesaco ayudas directamente a cientos de familias cafeteras y fruticultoras.</p></div></article>
+<article class="article"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Comida saludable"><div><small>Superalimentos · 6 min</small><h3>El poder de la Panela y Quinua</h3><p>Conoce los beneficios energéticos de la panela de San Pablo y la proteína pura de Imués.</p></div></article>
+</div></div></section>
+</main>
+<footer><div class="container">
+  <div class="footer-grid" style="padding-bottom: 25px;">
+    <div><a class="logo" href="#" style="color:white">nutri<span>viva.</span></a><p>Una tienda de nutrición apoyando la vocación agrícola de Nariño.</p></div>
+    <div><h4>Explora</h4><a href="#tienda">Catálogo</a><a href="#aprende">Artículos</a></div>
+    <div><h4>Pagos Seguros</h4><p style="color:var(--lime)">Recibimos NEQUI</p></div>
+  </div>
+  <div class="copyright" style="border-top:1px solid #355346; padding-top:18px; font-size:11px; color:#9db4a5;">
+    © 2026 NutriViva - Proyecto Académico.<br><br>
+    <strong>Taller desarrollado con el apoyo de herramientas IA:</strong><br>
+    1. <strong>ChatGPT:</strong> Conceptualización de la tienda y redacción persuasiva.<br>
+    2. <strong>Gemini:</strong> Desarrollo del código HTML/JS y estructuración de la base de datos agrícola.<br>
+    3. <strong>Microsoft Copilot:</strong> Búsqueda de precios reales de mercado y datos de los 6 municipios.<br>
+    4. <strong>Claude:</strong> Depuración y optimización de la lógica del chatbot y el proceso de checkout.
+  </div>
+</div></footer>
+
+<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawer-head"><div><div class="eyebrow">Tu selección</div><h2 style="margin:5px 0;color:var(--green)">Carrito</h2></div><button class="close" onclick="closeCart()">×</button></div><div id="cartItems"></div><div id="cartSummary"></div><div id="checkoutArea"></div></aside></div>
+<div class="modal" id="adminModal"><div class="modalbox"><div class="drawer-head"><div><div class="eyebrow">Panel privado · demostración</div><h2 style="margin:5px 0;color:var(--green)">Back office</h2></div><button class="close" onclick="closeAdmin()">×</button></div><div id="adminContent"></div></div></div>
+<div class="toast" id="toast"></div>
+
+<!-- ================= WIDGET CHATBOT ZANAHORIOT ================= -->
+<button class="zbot-launcher" id="zbotLauncher" aria-label="Abrir asistente agroalimentario Zanahoriot">
+  <span class="zbot-avatar-badge">🥕<span class="zbot-online-dot"></span></span>
+  <span class="zbot-launcher-text">
+    <strong>Zanahoriot</strong>
+    <small>Agro & Precios Nariño</small>
+  </span>
+</button>
+
+<section class="zbot-window" id="zbotWindow" aria-label="Chat con Zanahoriot">
+  <header class="zbot-header">
+    <div class="zbot-head-info">
+      <div class="zbot-head-icon">🥕</div>
+      <div>
+        <h3>Zanahoriot <span class="zbot-tag">Nariño</span></h3>
+        <p>Cultivos y precios · Sur de Colombia</p>
+      </div>
+    </div>
+    <div class="zbot-head-actions">
+      <button class="zbot-icon-btn" id="zbotResetBtn" title="Reiniciar conversación" aria-label="Reiniciar chat">↺</button>
+      <button class="zbot-icon-btn" id="zbotCloseBtn" title="Minimizar" aria-label="Cerrar chat">✕</button>
+    </div>
+  </header>
+  <div class="zbot-messages" id="zbotMessages"></div>
+  <div class="zbot-quick">
+    <button class="zbot-chip" id="qBtn1">📍 6 Municipios</button>
+    <button class="zbot-chip" id="qBtn2">💰 Precios mercado</button>
+    <button class="zbot-chip" id="qBtn3">🌱 Pisos térmicos</button>
+    <button class="zbot-chip" id="qBtn4">🛒 Compra inteligente</button>
+  </div>
+  <form class="zbot-input-area" id="zbotForm">
+    <input type="text" class="zbot-input" id="zbotInput" placeholder="Pregunta por cultivos o precios..." autocomplete="off">
+    <button type="submit" class="zbot-send" aria-label="Enviar pregunta">➤</button>
+  </form>
+</section>
+
+<!-- SCRIPT DE NUTRIVIVA Y CARRITO -->
+<script>
+try {
+  // CATÁLOGO REGIONAL DE NARIÑO (6 PRODUCTOS)
+  const products = [
+    {id:1, name:"Batido Energético de Lulo", category:"Batidos", price:12500, stock:18, tag:"Buesaco", img:"https://images.unsplash.com/photo-1623065422900-038165b4c104?auto=format&fit=crop&w=700&q=80", desc:"Batido refrescante a base de Lulo de Castilla cultivado en Buesaco, rico en vitamina C."},
+    {id:2, name:"Snack de Papa Criolla Horneada", category:"Snacks", price:8500, stock:25, tag:"Túquerres", img:"https://images.unsplash.com/photo-1576107255557-047f3b610c14?auto=format&fit=crop&w=700&q=80", desc:"Hojuelas de papa criolla de la sabana de Túquerres, horneadas y crujientes. Snack sin culpas."},
+    {id:3, name:"Proteína Vegetal Andina", category:"Proteína", price:75000, stock:12, tag:"Imués", img:"https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=700&q=80", desc:"Polvo de proteína a base de quinua y arveja cultivadas en Imués. Excelente perfil de aminoácidos."},
+    {id:4, name:"Infusión Antioxidante de Mora", category:"Batidos", price:14000, stock:20, tag:"Pasto", img:"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80", desc:"Concentrado natural de mora de Castilla de los páramos de Pasto para preparar bebidas antioxidantes."},
+    {id:5, name:"Café Especial Tostado", category:"Snacks", price:25000, stock:40, tag:"La Unión", img:"https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=700&q=80", desc:"Café de altura cultivado en La Unión. Notas cítricas y achocolatadas que te llenarán de energía."},
+    {id:6, name:"Panela Pulverizada Natural", category:"Superalimentos", price:9000, stock:30, tag:"San Pablo", img:"https://images.unsplash.com/photo-1621236113697-b7159c7bb61c?auto=format&fit=crop&w=700&q=80", desc:"Endulzante natural sin refinar procedente de los trapiches de San Pablo. Energía pura y sana."}
+  ];
+  
+  let cart=JSON.parse(localStorage.getItem("nv_cart")||"[]");
+  let orders=JSON.parse(localStorage.getItem("nv_orders")||"[]");
+  let discountApplied=false, currentFilter="Todos";
+  let buyerData = {name:'', email:'', city:'', address:''};
+
+  const money=n=>new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",maximumFractionDigits:0}).format(n);
+  
+  window.save = function(){localStorage.setItem("nv_cart",JSON.stringify(cart));localStorage.setItem("nv_orders",JSON.stringify(orders));}
+  
+  window.renderProducts = function(){
+    const list=products.filter(p=>currentFilter==="Todos"||p.category===currentFilter);
+    document.getElementById("productGrid").innerHTML=list.map(p=>`<article class="product"><div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="pill">${p.tag}</span></div><div class="product-body"><div class="product-type">${p.category}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addCart(${p.id})">Añadir al carrito</button></div></div></article>`).join("");
+  }
+  
+  window.setFilter = function(f,btn){
+    currentFilter=f;
+    document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.textContent.trim()===(f==="Todos"?"Todos":f) || x.textContent.includes(f)));
+    renderProducts();
+  }
+  
+  window.addCart = function(id){
+    const item=cart.find(x=>x.id===id);
+    if(item) item.qty++;
+    else cart.push({id,qty:1});
+    save(); updateCartCount(); toast("Producto añadido al carrito");
+  }
+  
+  window.updateCartCount = function(){document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);}
+  window.openCart = function(){renderCart();document.getElementById("cartOverlay").classList.add("open");}
+  window.closeCart = function(){document.getElementById("cartOverlay").classList.remove("open");}
+  
+  window.changeQty = function(id,d){
+    const item=cart.find(x=>x.id===id);
+    if(item) item.qty+=d;
+    cart=cart.filter(x=>x.qty>0);
+    save(); renderCart(); updateCartCount();
+  }
+
+  // --- LOGICA DE CHECKOUT CON NEQUI ---
+  window.renderCart = function(){
+    const area=document.getElementById("cartItems"), summary=document.getElementById("cartSummary"), checkout=document.getElementById("checkoutArea");
+    if(!cart.length){
+      area.innerHTML='<div class="empty">Tu carrito está vacío.<br><br><a href="#tienda" onclick="closeCart()" style="color:var(--green)">Explorar catálogo</a></div>';
+      summary.innerHTML=""; checkout.innerHTML=""; return;
+    }
+    
+    area.innerHTML=cart.map(x=>{const p=products.find(y=>y.id===x.id);return `<div class="cartline"><img src="${p.img}" alt=""><div><h4>${p.name}</h4><small>${money(p.price)}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button>${x.qty}<button onclick="changeQty(${p.id},1)">+</button></div></div><strong style="font-size:12px">${money(p.price*x.qty)}</strong></div>`}).join("");
+    
+    const subtotal=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);
+    const discount=discountApplied?subtotal*.10:0;
+    const total=subtotal-discount;
+    
+    summary.innerHTML=`
+      <label class="eyebrow" for="coupon">Código de descuento</label>
+      <div style="display:flex;gap:7px"><input class="field" id="coupon" placeholder="Prueba NUTRI10" style="margin:5px 0 12px"><button class="btn btn-light" onclick="applyCoupon()">Aplicar</button></div>
+      <div class="cart-total"><span>Subtotal</span><strong>${money(subtotal)}</strong></div>
+      ${discount?`<div class="cart-total"><span>Descuento NUTRI10</span><strong>−${money(discount)}</strong></div>`:""}
+      <div class="cart-total total"><span>Total a pagar</span><strong>${money(total)}</strong></div>`;
+    
+    // Proceso de Checkout: Paso 1 (Datos) y Paso 2 (Nequi)
+    checkout.innerHTML=`
+      <div id="checkoutStep1">
+        <h3 style="color:var(--green);font-size:16px">Datos de entrega</h3>
+        <input class="field" id="buyerName" placeholder="Nombre completo" value="${buyerData.name}" required>
+        <input class="field" id="buyerEmail" type="email" placeholder="Correo electrónico" value="${buyerData.email}" required>
+        <input class="field" id="buyerCity" placeholder="Ciudad" value="${buyerData.city}" required>
+        <input class="field" id="buyerAddress" placeholder="Dirección de entrega" value="${buyerData.address}" required>
+        <button class="btn btn-primary" style="width:100%" onclick="goToPayment()">Continuar al pago</button>
+      </div>
+      <div id="checkoutStep2" style="display:none; background:#f0f4ec; padding:18px; border-radius:12px; margin-top:10px; border:1px solid #cbd6c9; text-align:center;">
+        <h3 style="color:var(--green);font-size:16px; margin-top:0;">Pago Seguro</h3>
+        <p style="font-size:13px; color:var(--muted); margin-bottom:12px; line-height:1.5;">Transfiere el total estimado a nuestra cuenta oficial de Nequi:<br>
+        <strong style="font-size:24px; color:var(--nequi); display:block; margin-top:8px; letter-spacing:1px;">315 695 41 24</strong></p>
+        <div style="text-align:left; margin-top:15px;">
+          <label class="eyebrow" for="comprobante" style="display:block; margin-bottom:6px;">Anexar comprobante de pago</label>
+          <input type="file" id="comprobante" class="field" accept="image/*,.pdf" style="background:#fff; padding:9px;" required>
+        </div>
+        <button class="btn btn-primary" style="width:100%; background:var(--nequi); margin-top:10px;" onclick="placeOrder()">Confirmar Compra</button>
+        <button class="btn btn-outline" style="width:100%; margin-top:8px;" onclick="document.getElementById('checkoutStep2').style.display='none'; document.getElementById('checkoutStep1').style.display='block';">Volver</button>
+      </div>
+    `;
+  }
+
+  window.goToPayment = function(){
+    buyerData.name = document.getElementById("buyerName").value.trim();
+    buyerData.email = document.getElementById("buyerEmail").value.trim();
+    buyerData.city = document.getElementById("buyerCity").value.trim();
+    buyerData.address = document.getElementById("buyerAddress").value.trim();
+
+    if(!buyerData.name || !buyerData.email || !buyerData.city || !buyerData.address){
+      toast("Completa todos los datos de entrega para continuar");
+      return;
+    }
+    document.getElementById("checkoutStep1").style.display = "none";
+    document.getElementById("checkoutStep2").style.display = "block";
+  }
+
+  window.applyCoupon = function(){
+    const v=document.getElementById("coupon").value.trim().toUpperCase();
+    if(v==="NUTRI10"){ discountApplied=true; renderCart(); toast("Descuento aplicado: 10%"); }
+    else toast("Código no válido");
+  }
+
+  window.placeOrder = function(){
+    const fileInput = document.getElementById("comprobante");
+    if(!fileInput.files || fileInput.files.length === 0){
+      toast("¡Alerta! Debes anexar tu comprobante de pago Nequi.");
+      return;
+    }
+
+    const subtotal=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);
+    const total=subtotal-(discountApplied?subtotal*.1:0);
+    
+    orders.unshift({
+      id:"NV"+Date.now().toString().slice(-7),
+      name: buyerData.name, email: buyerData.email, city: buyerData.city, address: buyerData.address, 
+      total: total, 
+      status:"Pagado (Nequi Validado)",
+      date:new Date().toLocaleDateString("es-CO"),
+      items:cart.map(x=>({...x}))
+    });
+    
+    cart=[]; discountApplied=false; buyerData={name:'',email:'',city:'',address:''};
+    save(); updateCartCount(); renderCart(); closeCart();
+    toast("¡Compra exitosa! Hemos recibido tu comprobante de pago.");
+  }
+
+  // --- ADMINISTRADOR ---
+  window.openAdmin = function(){document.getElementById("adminModal").classList.add("open");renderAdmin("dashboard");}
+  window.closeAdmin = function(){document.getElementById("adminModal").classList.remove("open");}
+  window.renderAdmin = function(tab){const root=document.getElementById("adminContent");const sales=orders.reduce((s,o)=>s+o.total,0);root.innerHTML=`<div class="admin-tabs"><button class="filter ${tab==="dashboard"?"active":""}" onclick="renderAdmin('dashboard')">Resumen</button><button class="filter ${tab==="inventory"?"active":""}" onclick="renderAdmin('inventory')">Inventario</button><button class="filter ${tab==="orders"?"active":""}" onclick="renderAdmin('orders')">Pedidos</button><button class="filter ${tab==="customers"?"active":""}" onclick="renderAdmin('customers')">Clientes</button></div>`+(tab==="dashboard"?`<div class="admin-grid"><div class="metric"><small>Productos en catálogo</small><strong>${products.length}</strong></div><div class="metric"><small>Pedidos registrados</small><strong>${orders.length}</strong></div><div class="metric"><small>Ventas totales</small><strong style="font-size:18px">${money(sales)}</strong></div></div><p class="note">Panel administrativo local.</p>`:tab==="inventory"?`<table class="admin-table"><thead><tr><th>Producto</th><th>Precio</th><th>Stock</th><th>Actualizar</th></tr></thead><tbody>${products.map(p=>`<tr><td>${p.name}</td><td>${money(p.price)}</td><td>${p.stock}</td><td><button class="filter" onclick="editStock(${p.id})">Editar stock</button></td></tr>`).join("")}</tbody></table>`:tab==="orders"?`<table class="admin-table"><thead><tr><th>Pedido</th><th>Cliente</th><th>Total</th><th>Estado</th></tr></thead><tbody>${orders.length?orders.map(o=>`<tr><td>${o.id}</td><td>${o.name}</td><td>${money(o.total)}</td><td><select class="field" style="margin:0;padding:6px" onchange="setOrderStatus('${o.id}',this.value)"><option ${o.status==="Pendiente"?"selected":""}>Pendiente</option><option ${o.status==="Pagado (Nequi Validado)"?"selected":""}>Pagado (Nequi Validado)</option><option ${o.status==="Enviado"?"selected":""}>Enviado</option><option ${o.status==="Entregado"?"selected":""}>Entregado</option></select></td></tr>`).join(""):'<tr><td colspan="4">Todavía no hay pedidos.</td></tr>'}</tbody></table>`:`<table class="admin-table"><thead><tr><th>Cliente</th><th>Correo</th><th>Ciudad</th><th>Pedidos</th></tr></thead><tbody>${[...new Map(orders.map(o=>[o.email,o])).values()].map(o=>`<tr><td>${o.name}</td><td>${o.email}</td><td>${o.city}</td><td>${orders.filter(x=>x.email===o.email).length}</td></tr>`).join("")||'<tr><td colspan="4">No hay clientes registrados.</td></tr>'}</tbody></table>`);}
+  window.editStock = function(id){const p=products.find(x=>x.id===id),v=prompt("Nuevo stock para "+p.name,p.stock);if(v!==null&&Number.isInteger(Number(v))&&Number(v)>=0){p.stock=Number(v);renderAdmin("inventory");toast("Stock actualizado");}}
+  window.setOrderStatus = function(id,status){const o=orders.find(x=>x.id===id);if(o){o.status=status;save();toast("Estado del pedido actualizado");}}
+  
+  window.toast = function(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2800);}
+  
+  renderProducts(); updateCartCount();
+} catch(err) { console.warn("NutriViva Error:", err); }
+</script>
+
+<!-- SCRIPT INDEPENDIENTE DE ZANAHORIOT -->
+<script>
+(function() {
+  const launcher = document.getElementById("zbotLauncher");
+  const win = document.getElementById("zbotWindow");
+  const closeBtn = document.getElementById("zbotCloseBtn");
+  const resetBtn = document.getElementById("zbotResetBtn");
+  const form = document.getElementById("zbotForm");
+  const input = document.getElementById("zbotInput");
+  const box = document.getElementById("zbotMessages");
+  let zbotInitialized = false;
+
+  const ZBOT_MUNICIPIOS = {
+    pasto: {nombre: "San Juan de Pasto", subregion: "Centro / Valle de Atriz", altitud: "2.527 m s.n.m.", veredas: "Catambuco, Obonuco, La Laguna", cultivos: ["Zanahoria larga","Papa Pastusa y Criolla","Hortalizas","Mora de Castilla"], rolMercado: "Principal acopio del sur."},
+    launion: {nombre: "La Unión", subregion: "Norte de Nariño", altitud: "1.745 m s.n.m.", veredas: "La Playa, El Cusillo", cultivos: ["Café especial","Cítricos","Aguacate Papelillo"], rolMercado: "Despensa cafetera y frutícola."},
+    sanpablo: {nombre: "San Pablo", subregion: "Norte de Nariño", altitud: "1.750 m s.n.m.", veredas: "Bateros, La Cañada", cultivos: ["Caña panelera","Café de altura","Cítricos"], rolMercado: "Líder en panela tradicional."},
+    imues: {nombre: "Imués", subregion: "Cañón del Guáitara", altitud: "2.560 m s.n.m.", veredas: "Pilcuán, Pedregal", cultivos: ["Quinua y Arveja","Trigo y cebada","Papa"], rolMercado: "Estratégico en cereales y legumbres."},
+    tuquerres: {nombre: "Túquerres", subregion: "Sabana Centro", altitud: "3.104 m s.n.m.", veredas: "Santander, Pinzón", cultivos: ["Papa Criolla, Capiro y Única","Tubérculos andinos","Lácteos"], rolMercado: "Epicentro papero de Nariño."},
+    buesaco: {nombre: "Buesaco", subregion: "Cañón del Juanambú", altitud: "1.959 m s.n.m.", veredas: "Santa Fe, Juanambú", cultivos: ["Lulo y Tomate de árbol","Maíz/choclo","Café"], rolMercado: "Frontera frutícola clave."}
+  };
+
+  const ZBOT_PRECIOS = [
+    {key:["papa","pastusa","capiro"], producto:"Papa Capiro/Única", mayor:"$110.000 / bulto", detal:"$2.500 / kg", origen:"Túquerres, Pasto"},
+    {key:["criolla"], producto:"Papa Criolla", mayor:"$260.000 / bulto", detal:"$5.600 / kg", origen:"Pasto, Túquerres"},
+    {key:["zanahoria"], producto:"Zanahoria", mayor:"$85.000 / bulto", detal:"$2.200 / kg", origen:"Pasto"},
+    {key:["arveja"], producto:"Arveja verde", mayor:"$280.000 / bulto", detal:"$6.200 / kg", origen:"Imués"},
+    {key:["quinua"], producto:"Quinua", mayor:"$180.000 / bulto", detal:"$5.000 / kg", origen:"Imués"},
+    {key:["lulo"], producto:"Lulo de Castilla", mayor:"$120.000 / canastilla", detal:"$5.800 / kg", origen:"Buesaco"},
+    {key:["mora"], producto:"Mora de Castilla", mayor:"$90.000 / canastilla", detal:"$4.500 / kg", origen:"Pasto"},
+    {key:["cafe","café"], producto:"Café Especial", mayor:"Referencia carga", detal:"$25.000 / libra", origen:"La Unión"},
+    {key:["panela"], producto:"Panela", mayor:"$60.000 / caja", detal:"$2.200 / und", origen:"San Pablo"}
+  ];
+
+  function toggleZbot() {
+    const isOpen = win.classList.toggle("open");
+    launcher.classList.toggle("active", isOpen);
+    if(isOpen){
+      if(!zbotInitialized){ resetZbot(); zbotInitialized = true; }
+      setTimeout(() => { if(input) input.focus(); }, 150);
+    }
+  }
+
+  function resetZbot() {
+    box.innerHTML = "";
+    zbotAppend(`¡Hola! Soy <strong>Zanahoriot</strong> 🥕.<br>Conozco de los productos frescos que conforman nuestro catálogo (Lulo, Papa, Quinua, Mora, Café y Panela) y de los 6 municipios productores de Nariño.<br><br>¿De qué producto o municipio quieres saber?`, "bot");
+  }
+
+  function zbotAppend(html, sender="bot"){
+    const msg = document.createElement("div");
+    msg.className = "zbot-msg " + sender;
+    msg.innerHTML = html;
+    box.appendChild(msg); box.scrollTop = box.scrollHeight;
+  }
+
+  function handleZbotSubmit(e) {
+    e.preventDefault();
+    const text = input.value.trim();
+    if(!text) return;
+    const safeText = text.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    zbotAppend(safeText, "user"); input.value = "";
+    setTimeout(() => { zbotAppend(generateReply(text), "bot"); }, 240);
+  }
+
+  function sendQuick(txt) {
+    zbotAppend(txt, "user");
+    setTimeout(() => { zbotAppend(generateReply(txt), "bot"); }, 220);
+  }
+
+  function normalizeText(str){ return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim(); }
+
+  function renderMunicipioCard(m){
+    return `<strong>📍 ${m.nombre}</strong> (${m.subregion})
+      <div class="zbot-card"><div><strong>Cultivos principales:</strong></div>
+      <ul>${m.cultivos.map(c=>`<li>${c}</li>`).join("")}</ul>
+      <div style="margin-top:6px;color:#4a584d"><em>${m.rolMercado}</em></div></div>`;
+  }
+
+  function generateReply(raw){
+    const q = normalizeText(raw);
+    if(q.includes("pasto")) return renderMunicipioCard(ZBOT_MUNICIPIOS.pasto);
+    if(q.includes("la union") || q.includes("union")) return renderMunicipioCard(ZBOT_MUNICIPIOS.launion);
+    if(q.includes("san pablo") || q.includes("pablo")) return renderMunicipioCard(ZBOT_MUNICIPIOS.sanpablo);
+    if(q.includes("imues")) return renderMunicipioCard(ZBOT_MUNICIPIOS.imues);
+    if(q.includes("tuquerres")) return renderMunicipioCard(ZBOT_MUNICIPIOS.tuquerres);
+    if(q.includes("buesaco")) return renderMunicipioCard(ZBOT_MUNICIPIOS.buesaco);
+
+    if(q.includes("municipio") || q.includes("regiones")){
+      return `<strong>🗺️ Nuestros aliados en Nariño:</strong><br>Pasto (Mora), Túquerres (Papa), Imués (Quinua), La Unión (Café), San Pablo (Panela) y Buesaco (Lulo).`;
+    }
+
+    const matchedFoods = ZBOT_PRECIOS.filter(item => item.key.some(k => q.includes(normalizeText(k))));
+    if(matchedFoods.length > 0){
+      return `<strong>📊 Referencia de plaza local:</strong>` + matchedFoods.map(f => `
+        <div class="zbot-card">
+          <div class="zbot-card-title"><span>🌱 ${f.producto}</span><span class="zbot-badge-alt">${f.origen}</span></div>
+          <div><strong>Detal estimado:</strong> <span class="zbot-price-val">${f.detal}</span></div>
+        </div>`).join("");
+    }
+
+    if(q.includes("precio") || q.includes("mercado")){
+      return `Para ver los precios exactos de nuestros productos empacados, visita la sección de <strong>Catálogo</strong>. Si buscas precios de plaza de mercado, pregúntame por un ingrediente (ej. Lulo, Papa, Café).`;
+    }
+
+    if(q.includes("clima") || q.includes("piso")){
+      return `Nuestros ingredientes viajan desde el <strong>frío de Túquerres e Imués</strong> (papa, quinua) hasta el <strong>clima medio de San Pablo y La Unión</strong> (panela, café).`;
+    }
+
+    if(q.includes("barato") || q.includes("compra") || q.includes("inteligente")){
+      return `Te recomiendo el <strong>Snack de Papa Criolla</strong> o la <strong>Panela Pulverizada</strong>. Son nutritivos, rinden mucho y apoyan la agricultura nariñense. ¡Agrégalos en el carrito!`;
+    }
+
+    return `¡Entendido! 🥕 Puedo hablarte de los productos de nuestro catálogo (Lulo, Papa Criolla, Quinua, Mora, Café, Panela) o de los 6 municipios. ¿De cuál quieres saber?`;
+  }
+
+  if(launcher) launcher.addEventListener("click", toggleZbot);
+  if(closeBtn) closeBtn.addEventListener("click", toggleZbot);
+  if(resetBtn) resetBtn.addEventListener("click", resetZbot);
+  if(form) form.addEventListener("submit", handleZbotSubmit);
+  
+  if(document.getElementById("qBtn1")) document.getElementById("qBtn1").addEventListener("click", () => sendQuick("Municipios de Nariño"));
+  if(document.getElementById("qBtn2")) document.getElementById("qBtn2").addEventListener("click", () => sendQuick("Precios del mercado hoy"));
+  if(document.getElementById("qBtn3")) document.getElementById("qBtn3").addEventListener("click", () => sendQuick("Cultivos por clima"));
+  if(document.getElementById("qBtn4")) document.getElementById("qBtn4").addEventListener("click", () => sendQuick("Qué alimentos comprar inteligente"));
+
+})();
+</script>
+</body>
+</html>
